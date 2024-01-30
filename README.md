@@ -14,9 +14,11 @@ Overpricing: Cars priced too high stagnate on the lot, incurring storage costs a
 To address this business challenge, we will leverage Second Wind Wheels existing used car sales data along with additional data scraped from various automotive websites to develop a machine learning model that can accurately predict used car prices.
 
 ### Data Pertinence & Attribution:
+
 The model will be developed using up-to-date used car listing data scraped from major automotive sales sites to incorporate broader market pricing trends. It includes details on used car sales across the Japan.
 
 ### Data Collection
+
 Wescraped our data from SBT Japan. And cleaned it.
 Some of the steps included:
  1. Dealing with rare categories. If they are too many to list we either group them into a single category or drop the categories.
@@ -36,6 +38,7 @@ Some of the steps included:
 
 ### EDA
 Some of our findings were: 
+
 **Popularity Of Models**
 
  In the Toyota category, Prius, Landcruiser Prado, and Crown hybrid are the top three most frequently encountered models.
@@ -45,6 +48,7 @@ Some of our findings were:
  Among BMW models, the 5 Series, 7 Series, and X5 stand out.
 
 **Year of Manufacture and mileage**
+
 Most vehicles  were manufactured in 2021, followed by 2020 and 2022. Fewer vehicles were manufactured in 2024.
 
 Vehicles manufactured in earlier years tend to have higher mileage compared to recent years.
@@ -60,6 +64,7 @@ Vehicles with automatic transmission generally have higher mean prices compared 
 Vehicles with lower mileage tend to have higher mean prices, while those with higher mileage are relatively cheaper.
 
 ### Modelling
+
 Our methodology involved leveraging both Random Forest Regressor and XGBoost Regressor, accompanied by grid searches to optimize on their respective parameters, thereby enhancing their performance.
 
 Initially, the Random Forest Regressor Model yielded an r2 score of 0.8514. However, after hyperparameter tuning the score improved to 0.8535, indicating a slight improvement in predictive accuracy.
